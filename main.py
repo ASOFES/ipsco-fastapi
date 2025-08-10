@@ -54,7 +54,7 @@ if DB_AVAILABLE:
         from routes import vehicules_real, missions_complete
         app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
         app.include_router(vehicules.router, prefix="/api/vehicules", tags=["Véhicules"])
-        app.include_router(vehicules_real.router, prefix="/api/vehicules", tags=["Véhicules Real"])
+        # app.include_router(vehicules_real.router, prefix="/api/vehicules", tags=["Véhicules Real"])  # Commenté pour éviter le conflit
         app.include_router(missions.router, prefix="/api/missions", tags=["Missions Demo"])
         app.include_router(missions_complete.router, prefix="/api/missions", tags=["Missions Complete"])
         app.include_router(chauffeurs.router, prefix="/api/chauffeurs", tags=["Chauffeurs"])
